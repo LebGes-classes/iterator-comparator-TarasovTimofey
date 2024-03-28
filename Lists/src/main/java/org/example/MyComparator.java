@@ -2,10 +2,9 @@ package org.example;
 
 import java.util.Comparator;
 
-
-public class MyComparator<T> implements Comparator<T> {
+public class MyComparator implements Comparator<MyComparable> {
     @Override
-    public int compare(T o1, T o2) {
-        return 0;
+    public int compare(MyComparable obj1, MyComparable obj2) {
+        return obj1.getValue() - obj2.getValue();
     }
 }
